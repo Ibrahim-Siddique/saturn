@@ -633,19 +633,19 @@ export function useCursor(
 
     switch (event.key) {
       case 'ArrowLeft':
-        if (hasActionKey(event)) {
-          moveStart(event.shiftKey)
-        } else {
-          moveLeft(hasAltKey(event), event.shiftKey)
-        }
+        // if (hasActionKey(event)) {
+        //  moveStart(event.shiftKey)
+        // } else {
+        moveLeft(hasActionKey(event), event.shiftKey)
+        //}
         break
 
       case 'ArrowRight':
-        if (hasActionKey(event)) {
-          moveEnd(event.shiftKey)
-        } else {
-          moveRight(hasAltKey(event), event.shiftKey)
-        }
+        // if (hasActionKey(event)) {
+        // moveEnd(event.shiftKey)
+        // } else {
+        moveRight(hasActionKey(event), event.shiftKey)
+        // }
         break
 
       case 'ArrowDown':
@@ -703,11 +703,11 @@ export function useCursor(
           let nextPosition: SelectionIndex
 
           if (doDelete) {
-            nextPosition = editor().deleteForwards(value, hasAltKey(event))
+            nextPosition = editor().deleteForwards(value, hasActionKey(event))
           } else {
             nextPosition = editor().backspace(
               value,
-              hasAltKey(event),
+              hasActionKey(event),
               settings.tabSize
             )
           }
