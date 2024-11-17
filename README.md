@@ -1,3 +1,5 @@
+This repository is a fork of Saturn with the Alt + Left/Right arrow hotkeys remapped to Ctrl/Cmd + Left/Right arrow.
+
 # Saturn - Modern MIPS Environment
 
 Saturn is a development environment for educational learning with the MIPS processor architecture.
